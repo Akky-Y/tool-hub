@@ -1,13 +1,13 @@
-import ItemCard from "@/components/item-card";
-import { allItems } from "@/data";
-import type { TagId } from "@/data/tags";
+"use client";
 
-export default function Page({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
-}) {
-  const tags = (searchParams.tags as string)?.split(",");
+import ItemCard from "@/components/item-card";
+import { allItems } from "@/data/item";
+import type { TagId } from "@/data/tag";
+import { useSearchParams } from "next/navigation";
+
+export default function Page() {
+  const searchParams = useSearchParams();
+  const tags = (searchParams.get("tags") as string)?.split(",");
 
   const currentItems = allItems.filter((item) => {
     if (!tags) {
@@ -30,7 +30,7 @@ export default function Page({
       {currentItems.map((item) => (
         <ItemCard
           key={item.title}
-          imageURL={item.imageURL}
+          id={item.id}
           href={item.href}
           title={item.title}
           tags={item.tags}

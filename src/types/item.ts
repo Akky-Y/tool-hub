@@ -1,7 +1,7 @@
-import type { TagId } from "@/data/tags";
+import type { TagId } from "@/data/tag";
 
 export type Item = {
-  imageURL: string;
+  id: string;
   href: string;
   title: string;
   tags: TagId[];

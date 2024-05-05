@@ -1,4 +1,4 @@
-import { type TagId, allTags } from "@/data/tags";
+import { type TagId, allTags } from "@/data/tag";
 import type { Tag } from "@/types/tags";
 
 export const mainTags: TagId[] = ["illust", "photo", "icon"];

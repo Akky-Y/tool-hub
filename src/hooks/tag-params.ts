@@ -1,6 +1,6 @@
 "use client";
 
-import type { TagId } from "@/data/tags";
+import type { TagId } from "@/data/tag";
 import { mainTags } from "@/lib/tag";
 import { useSearchParams } from "next/navigation";
 
