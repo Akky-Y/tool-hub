@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 export default function Header() {
   return (
-    <header className="pl-8 border-b h-16 flex items-center gap-4">
+    <header className="p-4 border-b h-16 flex items-center gap-4">
       <div className="lg:hidden">
         <Suspense>
           <MobileNav />
